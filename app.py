@@ -23,5 +23,5 @@ wsgiapp = app.wsgifunc()
 
 
 if __name__ == "__main__":
-    web.config.debug = True # activa o desactiva el modo de repuracion de firebase
+    web.config.debug = True 
     app.run()
