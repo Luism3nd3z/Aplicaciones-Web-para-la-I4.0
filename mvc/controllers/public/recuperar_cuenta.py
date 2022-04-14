@@ -5,8 +5,7 @@ import json # libreria para manejar el formato JSON
 
 
 app = web.application(urls, globals()) 
-render = web.template.render('mvc/views/public/', base="layout")
-
+render = web.template.render('mvc/controllers/public/', base="layout")
 
 
 class Recuperar_cuenta:
@@ -20,4 +19,4 @@ class Recuperar_cuenta:
             email = formulario.email
             results = auth.send_password_reset_email(email)
             print(results)
-            return web.seeother("/")
+            return web.seeother("/login")
