@@ -20,3 +20,4 @@ class Recuperar_cuenta:
             email = formulario.email
             results = auth.send_password_reset_email(email)
             print(results)
+            return web.seeother("/")
