@@ -6,7 +6,7 @@ import json # se importa la libreria de json para hacer uso y modificación de e
 app = web.application(urls, globals()) 
 render = web.template.render('mvc/controllers/public/', base="layout")
 
-class Loyout:
+class logout:
     def GET(self):
         web.setcookie('localid',"") 
         return web.seeother("/login") 
