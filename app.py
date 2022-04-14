@@ -14,7 +14,7 @@ urls = (
     '/sensor','mvc.controllers.operador.sensor.Sensor',
 
     '/', 'mvc.controllers.public.inicio.Inicio',  
-    '/loyout', 'mvc.controllers.public.loyout.Loyout',
+    '/layout', 'mvc.controllers.public.layout.Layout',
     '/login', 'mvc.controllers.public.login.Login',
     '/recuperar_cuenta', 'mvc.controllers.public.recuperar_cuenta.Recuperar_cuenta',   
 )
