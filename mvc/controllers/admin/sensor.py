@@ -7,7 +7,7 @@ import firebase_config as token # se importa la libreria de firebase_comfig para
 render = web.template.render('mvc/controllers/admin/', base="layout")
 
 
-class sensor:
+class Sensor:
     def GET(self):
         if ( web.cookies().get('localid')) == "": # se pone una condicional si localid es igual a vacio que esta nos vuelva a mandar a la pagina login
             return web.seeother("/index")

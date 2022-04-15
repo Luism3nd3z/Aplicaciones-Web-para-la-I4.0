@@ -3,8 +3,7 @@ import pyrebase # libreria para contecarse con firebase
 import firebase_config as token # archivo con la configuracion de firebase
 import json # libreria para manejar el formato JSON
 
-
-app = web.application(urls, globals()) 
+ 
 render = web.template.render('mvc/controllers/public/', base="layout")
 
 

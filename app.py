@@ -13,7 +13,7 @@ urls = (
     '/bienvenida_usuario','mvc.controllers.operador.bienvenida_usuario.Bienvenida',
     '/sensor','mvc.controllers.operador.sensor.Sensor',
 
-    '/inicio', 'mvc.controllers.public.inicio.Inicio',  
+    '/', 'mvc.controllers.public.inicio.Inicio',  
     '/layout', 'mvc.controllers.public.layout.Layout',
     '/login', 'mvc.controllers.public.login.Login',
     '/recuperar_cuenta', 'mvc.controllers.public.recuperar_cuenta.Recuperar_cuenta',   
