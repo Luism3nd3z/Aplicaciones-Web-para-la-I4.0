@@ -46,4 +46,4 @@ class Login:
             message = error['message']
             if message == "invalid_password" :
                 return render.login(message) 
-            print("Error Login.POST: {}".format(message)) 
+            print("Error login.POST: {}".format(message)) 
