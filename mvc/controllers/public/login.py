@@ -30,7 +30,7 @@ class Login:
             print(local_id) 
             web.setcookie('localid', local_id)
             busqueda =  db.child("usuarios").child(user['localId']).get()
-            if busqueda.val()['nivel'] == 'Administrador':
+            if busqueda.val()['nivel'] == 'administrador':
                 if busqueda.val()['status'] == "inactivo":  
                     return render.inicio()
                 else:
