@@ -34,8 +34,9 @@ class Login:
                 return web.seeother("/bienvenida_administrador")
             else:
                 return web.seeother("/bienvenida_usuario")
+
             if busqueda.val()['status'] =='activo':
-                 return web.seeother("/bienvenida_usuario")
+                return web.seeother("/bienvenida_usuario")
             else:
                 return web.seeother("/")
 
