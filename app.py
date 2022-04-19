@@ -5,6 +5,8 @@ import json # se importa la libreria de json para hacer uso y modificación de e
 
 urls = (
     '/user_list', 'mvc.controllers.admin.user_list.User_list',
+    '/update/(.*)', 'mvc.controllers.admin.update.Update',
+    '/activo/(.*)', 'mvc.controllers.admin.activo.Activo',
     '/bienvenida_administrador','mvc.controllers.admin.bienvenida_administrador.Bienvenida_administrador',
     '/sensor','mvc.controllers.admin.sensor.Sensor', 
     '/user_view/(.*)','mvc.controllers.admin.user_view.User_view',

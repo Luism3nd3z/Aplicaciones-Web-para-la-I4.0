@@ -31,15 +31,15 @@ class Login:
             web.setcookie('localid', local_id)
             busqueda =  db.child("usuarios").child(user['localId']).get()
             if busqueda.val()['nivel'] == 'Administrador':
-                return web.seeother("/bienvenida_administrador")
-            else:
-                return web.seeother("/bienvenida_usuario")
-
-            if busqueda.val()['status'] =='activo':
-                return web.seeother("/bienvenida_usuario")
-            else:
-                return web.seeother("/")
-
+                if busqueda.val()['status'] == "inactivo":  
+                    return render.inicio()
+                else:
+                    return web.seeother("/bienvenida_administrador")
+            elif busqueda.val()['nivel'] == "usuario":
+                if busqueda.val()['status'] == "inactivo": 
+                    return render.inicio()
+                else:
+                    return web.seeother("/bienvenida_usuario")
         except Exception as error: # Error en formato JSON
             formato = json.loads(error.args[1])
             error = formato['error'] 
