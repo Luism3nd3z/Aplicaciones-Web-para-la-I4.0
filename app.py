@@ -9,11 +9,9 @@ urls = (
     '/sensor','mvc.controllers.admin.sensor.Sensor', 
     '/user_view/(.*)','mvc.controllers.admin.user_view.User_view',
     '/registro','mvc.controllers.admin.registro.Registro',
-    
     '/bienvenida_usuario','mvc.controllers.operador.bienvenida_usuario.Bienvenida',
     '/sensor','mvc.controllers.operador.sensor.Sensor',
-
-    '/', 'mvc.controllers.public.inicio.Inicio',  
+    '/inicio', 'mvc.controllers.public.inicio.Inicio',  
     '/layout', 'mvc.controllers.public.layout.Layout',
     '/login', 'mvc.controllers.public.login.Login',
     '/recuperar_cuenta', 'mvc.controllers.public.recuperar_cuenta.Recuperar_cuenta',   
