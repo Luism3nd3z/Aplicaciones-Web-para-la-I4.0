@@ -4,13 +4,13 @@ import web # se importa la libreria de web.py para hacer sus del framework
 import pyrebase # se importa la libreria de firebase para hacer uso de la fire base creada de google
 import firebase_config as token # se importa la libreria de firebase_comfig para hacer uso de nuestro token de fire base
 
-render = web.template.render('mvc/controllers/admin/', base="layout")
+render = web.template.render('mvc/view/admin', base="layout")
 
 
 class Sensor:
     def GET(self):
         if ( web.cookies().get('localid')) == "": # se pone una condicional si localid es igual a vacio que esta nos vuelva a mandar a la pagina login
-            return web.seeother("/index")
+            return web.seeother("/inicio")
         else :
          return render.sensor() # nos devuelve el render bienvendia 
 

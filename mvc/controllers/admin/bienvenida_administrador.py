@@ -4,7 +4,7 @@ import firebase_config as token # archivo con la configuracion de firebase
 import json # libreria para manejar el formato JSON
 
 
-render = web.template.render('mvc/controllers/admin/', base="layout")
+render = web.template.render('mvc/view/admin', base="layout")
 
 
 class Bienvenida_administrador:

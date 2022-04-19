@@ -4,7 +4,7 @@ import firebase_config as token # archivo con la configuracion de firebase
 import json # libreria para manejar el formato JSON
 
  
-render = web.template.render('mvc/controllers/public/', base="layout")
+render = web.template.render('mvc/view/public', base="layout")
 
 class Login: 
     def GET(self): 

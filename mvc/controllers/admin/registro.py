@@ -3,7 +3,7 @@ import pyrebase # libreria para contecarse con firebase
 import firebase_config as token # archivo con la configuracion de firebase
 import json # libreria para manejar el formato JSON
 
-render = web.template.render('mvc/controllers/admin/', base="layout")
+render = web.template.render('mvc/view/admin', base="layout")
 
 
 
@@ -38,7 +38,7 @@ class Registro:
             "nivel": nivel
             }
             results = db.child("usuarios").child(user['localId']).set(data)
-            return web.seeother("/") 
+            return web.seeother("/bienvenida_administrador") 
         except Exception as error: 
             formato = json.loads(error.args[1]) # Error en formato JSON
             error = formato['error'] 

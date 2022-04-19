@@ -4,10 +4,10 @@ import firebase_config as token # se importa la libreria de firebase_comfig para
 import json # se importa la libreria de json para hacer uso y modificación de estos elementos
 
 
-render = web.template.render('mvc/controllers/admin/', base="layout")
+render = web.template.render('mvc/view/admin', base="layout")
 
 
-class Userview:                             
+class User_view:                             
     def GET(self,localId):
         try:
             firebase = pyrebase.initialize_app(token.firebaseConfig) 

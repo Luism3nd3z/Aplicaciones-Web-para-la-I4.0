@@ -4,14 +4,14 @@ import firebase_config as token # se importa la libreria de firebase_comfig para
 import json # se importa la libreria de json para hacer uso y modificación de estos elementos
 
 
-render = web.template.render('mvc/controllers/admin/', base="layout")
+render = web.template.render('mvc/view/admin', base="layout")
 
-class UsersList:                             
+class User_list:                             
     def GET(self):
         try:
             firebase = pyrebase.initialize_app(token.firebaseConfig) 
             db = firebase.database() 
             users = db.child("usuarios").get()
-            return render.users_list(users) 
+            return render.user_list(users) 
         except Exception as error: 
             print("Error Login.GET: {}".format(error))

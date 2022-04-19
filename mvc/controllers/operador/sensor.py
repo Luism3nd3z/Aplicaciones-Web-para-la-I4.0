@@ -4,7 +4,7 @@ import firebase_config as token # se importa la libreria de firebase_comfig para
 import json # se importa la libreria de json para hacer uso y modificación de estos elementos
 
 
-render = web.template.render('mvc/controllers/operador/', base="layout")
+render = web.template.render('mvc/view/operador', base="layout")
 
 
 class Sensor:
